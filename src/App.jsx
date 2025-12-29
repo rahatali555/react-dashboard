@@ -1,7 +1,4 @@
-function App(){
-  return <h1>Hello React Dashboard</h1>
-}
-export default App;
+
 //avatar component
 function Avatar (){return ( <img src="https://via.placeholder.com/100"
   alt="Avatar" 
@@ -15,4 +12,20 @@ function UserInfo() {
     <h2> fRONT eND dEVELOPER</h2>
     </div>
   );
+}
+function ProfileCard() {
+  return (
+    <div style={{textAlign:`center`, border:`1px solid #ccc`, padding:`20px`, margin:`20px`}}>
+      <Avatar />
+      <UserInfo/>
+    </div>
+  );
+}
+export default function App (){
+  return(
+    <div>
+      <h2> My App</h2>
+      <ProfileCard/>
+    </div>
+  )
 }
