@@ -28,8 +28,7 @@ function Avatar() {
   );
 }
 
-// UserInfo component — BUT wait! We need two different ones...
-// So for now (without props), we'll make two versions:
+
 
 function UserInfoAli() {
   return (
@@ -40,6 +39,8 @@ function UserInfoAli() {
     </div>
   );
 }
+//user info for fatima
+
 
 function UserInfoFatima() {
   return (
