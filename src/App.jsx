@@ -1,19 +1,18 @@
 function MyButton(){
-  return (
-    <button className="my-button">
-      Hey its me click me!
-    </button>
+  return(
+    <button>Am Button</button>
   );
 }
 function App(){
-  const User={
-    name:"Johr"
-  };
+   const user={name:"rahat"};
   return(
     <>
-    <h1>{User.name}</h1>
+    <h1>{user.name}</h1>
     <MyButton/>
     </>
+   
+    
+   
   );
 }
 export default App;
