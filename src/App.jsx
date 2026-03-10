@@ -10,7 +10,6 @@ function UserPanel(){
 return(
   <>
   <h2> User Panel</h2>
-
 </>
 );
 }
