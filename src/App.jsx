@@ -37,33 +37,32 @@
 
 function AdminPanel(){
   return(
-  
-<> 
-<h2>AdminPanel</h2>
-</>
-    
-  )
+    <>
+    <h1> Admin Panel</h1>
+    </>     
+  );
 }
- function UserPanel(){
+function UserPanel(){
+  return (
+    <>
+    <h2> User Panel </h2>
+    </>
+  );
+}
+
+function App (){
+  let isloggedIn=false
+  let content;
+  if(isloggedIn){
+    content=<AdminPanel/>
+  } 
+  else{
+    content=<UserPanel/>
+  }
   return(
     <>
-    <h2>userpanel</h2> </>
+    "{content}
+    </>
   )
- }
- function App(){
-  let IsloggedIN=true;
-  let content;
-  if(IsloggedIN)
-{
-  content =<AdminPanel/>;
-} 
-else{
-  content=<UserPanel/>;
 }
-return(
-  <>
-  {content}
-  </>
-)
- }
- export default App;
+export default App;
