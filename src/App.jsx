@@ -11,7 +11,7 @@ return(
   <>
   <h2> User Panel</h2>
 
-  </>
+</>
 );
 }
 function App(){
