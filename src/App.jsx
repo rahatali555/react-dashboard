@@ -1,29 +1,32 @@
-function MyButton(){
+function AdminPanel(){
   return(
     <>
-    
-    <button> Click here!</button>
-  </>);
-}
-function MyName(){
-  const user={
-    name:"rahat",
-    age:32,
-    address:"lahore"
-  }
+    <h2> Admin Panel</h2>
+    </>
+  );
 
+}
+function UserPanel(){
+return(
+  <>
+  <h2> User Panel</h2>
+
+  </>
+);
+}
+function App(){
+  let  IsloggedIn=false;
+  let content;
+  if(IsloggedIn==true){
+    content=<AdminPanel/>
+  } 
+  else{
+    content=<UserPanel/>
+  }
   return(
     <>
-    <h2> My name is {user.name}and my age is {user.age} and am living in {user.address}</h2>
-    
-    <MyButton/>
+    {content}
     </>
-  )
+  );
 }
-export default function(){
-  return(
-    <>
-    <MyName/>
-    </>
-  )
-}
+export default App;
