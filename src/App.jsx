@@ -1,30 +1,26 @@
-function AdminPanel(){
-  return(
-    <>
-    <h2> Admin Panel</h2>
-    </>
-  );
+const products=[
+  {title:'cabbage', isFruit:false,id:1},
+  {TITLE:'Garlic',isFruit:false, id:2},
+  {title:'Apple', isFruit:true, id:3},
+];
+ 
+function ShoppingList(){
+  const ListItems =products.map(products=>
+    <li 
+    key={products.id}
+    style={{
+      color:products.isFruit ? 'magenta': 'darkgreen'
+    }}
+    >
+      {products.title}
 
-}
-function UserPanel(){
-return(
-  <>
-  <h2> User Panel</h2>
-</>
-);
-}
-function App(){
-  let  IsloggedIn=false;
-  let content;
-  if(IsloggedIn==true){
-    content=<AdminPanel/>
-  } 
-  else{
-    content=<UserPanel/>
-  }
-  return(
+    </li>
+  );
+  return (
     <>
-    {content}
-    </> );
+    <h1> My Shopping List </h1>
+    <ul> {ListItems}  </ul>
+    </>
+  )
 }
-export default App;
+export default ShoppingList;
