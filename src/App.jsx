@@ -1,29 +1,27 @@
-const products=[
-  {title:'cabbage', isFruit:false, id:1},
-  {title:'Garlic', isFruit:false, id:2},
-  {title:'Apple', isFruit:false, id:3},
+const products= [
+  { title:'cabbage', isFRUIT:false, id:1 },
+  { title:'garlic', isFRUIT:false, id:2},
+  { title:'Apple', isFRUIT:true, id:3 },
 ];
- export default function ShoppingList(){
-
+export default function ShoppingList(){
   const listItems=[];
-
-  for( let i=0;i < products.length;i++){
+  for(let i=0; i<products.length;i++){
     const product= products[i];
-    listItems.push(
-      <li 
-       key={product.id}
-       style={{
-         color: product.isFruit ? "magenta" : "darkgreen"
-       }}
-       >
-        {product.title}
+  listItems.push(
+    <li 
+    key={product.id} 
+    style={{
+      color: product.isFRUIT ? 'magenta': 'darkgreen'
+    }}
+    >
+      {product.title}
 
-
-      </li>
-    )
-
-  }
+    </li>
+    
+  )}
   return(
-    <ul> {listItems} </ul>
+    <ul>
+    {listItems}
+    </ul>
   )
 }
