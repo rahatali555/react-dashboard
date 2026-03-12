@@ -1,25 +1,27 @@
-function MyButton(){
+function AdminPanel(){
   return(
-    <>
-
-    <button> Click here</button>
-    </>
-  )
+    <h1>AdminPanel</h1>
+  );
 }
-const User={
-  name:"rahat",
-  age:32,
-  Address:"lahore"
-};
-
-export default function App(){
+function LoginForm()
+{
   return(
-    <>
-    <h1>
-      {User.name},{User.age},{User.Address}
-    </h1>
-    <MyButton/>
-    </>
-  )
-
+    <h1> LoginForm</h1>
+  );
+}
+export default function App(){
+  const isloggedIn=true;
+let Content;
+if (isloggedIn){
+  Content=<AdminPanel/>;
+}
+ else{
+  Content=<LoginForm/>;
+  
+}
+return(
+  <>
+  {Content}
+  </>
+);
 }
