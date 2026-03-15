@@ -1,27 +1,27 @@
 function AdminPanel(){
   return(
-    <h1>AdminPanel</h1>
+    <>
+    <h1>AdminPanel</h1></>
   );
 }
-function LoginForm()
-{
+function LoginForm(){
   return(
-    <h1> LoginForm</h1>
+    <>
+    <h1>LoginForm </h1></>
   );
 }
 export default function App(){
-  const isloggedIn=true;
-let Content;
-if (isloggedIn){
-  Content=<AdminPanel/>;
-}
- else{
-  Content=<LoginForm/>;
-  
-}
-return(
-  <>
-  {Content}
-  </>
-);
+ 
+  let content;
+  let LoggedIn= true;
+ 
+  if(LoggedIn=true){
+  content=<AdminPanel/>
+  }
+  else{
+    content=<LoggedIn/>
+  }
+  return(<>
+    {content}
+  </>)
 }
