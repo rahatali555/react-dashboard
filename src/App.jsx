@@ -1,27 +1,23 @@
-function AdminPanel(){
+import { useState } from "react";
+
+function MyButton(){
+  const[count, setCount]=useState(0);
+   
+  function handleClick(){
+    setCount(count+1)
+  }
   return(
-    <>
-    <h1>AdminPanel</h1></>
-  );
-}
-function LoginForm(){
-  return(
-    <>
-    <h1>LoginForm </h1></>
-  );
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  )
 }
 export default function App(){
+  return (
+    <div>
+      <h1> counters that update separetly</h1>
+      <MyButton/>
  
-  let content;
-  let LoggedIn= true;
- 
-  if(LoggedIn=true){
-  content=<AdminPanel/>
-  }
-  else{
-    content=<LoggedIn/>
-  }
-  return(<>
-    {content}
-  </>)
+       <MyButton/> </div>
+  )
 }
