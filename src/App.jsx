@@ -18,4 +18,5 @@ export default function App(){
     <h1> counter that updates</h1>
     <MyButton/>
     <MyButton/> 
-      </> );}
+      </> );
+      }
